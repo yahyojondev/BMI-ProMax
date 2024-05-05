@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100%;
+  max-width: 1340px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+@import "./components/admin.scss";
+@import "./components/cart.scss";
+@import "./components/footer.scss";
+@import "./components/header.scss";
+@import "./components/navbarbottom.scss";
+@import "./components/navbartop.scss";
+@import "./components/payment.scss";
+@import "./components/singleroute.scss";
+@import "./components/wishlist.scss";
+@import "./pages/contact.scss";
+@import "./pages/home.scss";
+@import "./pages//login.scss";

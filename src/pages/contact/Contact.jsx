@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+const Token = "6756877976:AAG0sVndx22BQXhwfR98bJrMqGYaguuPE6Q";
+
+// updates: https://api.telegram.org/bot6756877976:AAG0sVndx22BQXhwfR98bJrMqGYaguuPE6Q/getUpdates//
+
+const USER_ID = "1240482901";
+const userID = "1747801883";
+const CHAT_ID = "-1001549644098";
+const userID2 = "547328126";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const handleOrder = (e) => {
+    console.log(name);
+    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${CHAT_ID}&text=${name}`;
+    let api = new XMLHttpRequest();
+    api.open("GET", url, true);
+    api.send();
+  };
+
   return (
     <>
       <div className="contact">
@@ -16,7 +34,12 @@ const Contact = () => {
             <form className="contact__right">
               <div className="input__wrapper">
                 <p>Full Name</p>
-                <input placeholder="James Doe" type="text" />
+                <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="James Doe"
+                  type="text"
+                />
               </div>
               <div className="input__wrapper">
                 <p>Email</p>
@@ -34,7 +57,7 @@ const Contact = () => {
         <div className="search__wrapper">
           <div className="input_wrapper">
             <input placeholder="search query" type="text" />
-            <button>Search</button>
+            <button onClick={handleOrder}>Search</button>
           </div>
         </div>
       </div>

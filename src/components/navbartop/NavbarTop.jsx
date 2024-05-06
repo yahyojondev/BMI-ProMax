@@ -24,7 +24,9 @@ const NavbarTop = () => {
             <NavLink to={"/cart"}>
               <FiShoppingCart className="navbartop__svg" />
             </NavLink>
-            <NavLink className="navbartop__text">Items</NavLink>
+            <NavLink className="navbartop__text" to={"/contact"}>
+              Items
+            </NavLink>
             <NavLink>
               <IoSearchOutline className="navbartop__svg" />
             </NavLink>

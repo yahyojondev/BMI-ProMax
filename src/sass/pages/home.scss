@@ -125,6 +125,9 @@
 //shipping //
 .shipping {
   padding: 97px 0px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &__wrapper {
     display: flex;
     flex-wrap: wrap;

@@ -1,0 +1,87 @@
+.footer {
+  padding: 120px 0 30px;
+  background-color: rgb(188, 221, 254);
+  &__wrapper {
+    .footer__top {
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 300px;
+        row-gap: 70px;
+        .footer__top__item {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            p {
+              color: rgb(34, 38, 42);
+              font-family: Poppins;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 27px;
+              letter-spacing: 0%;
+            }
+          }
+          h4 {
+            color: rgb(34, 38, 42);
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            letter-spacing: 0%;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+              display: flex;
+              align-items: end;
+              gap: 20px;
+              width: 100%;
+              max-width: 221px;
+              color: rgb(34, 38, 42);
+              font-family: poppins;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 15px;
+              letter-spacing: 0%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding-top: 74px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      @media only screen and (min-width: 400px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .footer__bottom__link {
+        color: rgb(193, 200, 206);
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: center;
+        @media only screen and (min-width: 400px) {
+          text-align: start;
+        }
+      }
+    }
+  }
+}

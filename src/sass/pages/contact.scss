@@ -1,0 +1,99 @@
+.contact {
+  padding: 200px 0px 134px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    padding: 123px 0px 0px 84px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 626px;
+    height: 715px;
+    background: rgb(64, 191, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    h1 {
+      color: rgb(255, 255, 255);
+      font-family: Poppins;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+      letter-spacing: 0%;
+    }
+    a {
+      color: rgb(255, 255, 255);
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      letter-spacing: 0px;
+      text-align: left;
+      text-transform: lowercase;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    .input__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        color: rgb(55, 55, 55);
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0px;
+        text-transform: capitalize;
+      }
+      input {
+        padding-left: 30px;
+        outline: none;
+        // width: 100%;
+        width: 510.15px;
+        height: 73.17px;
+        box-sizing: border-box;
+        border: 1px solid rgb(150, 147, 147);
+        border-radius: 0px 3px 3px 0px;
+        box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.01);
+        background: rgb(255, 255, 255);
+        color: rgb(55, 55, 55);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0px;
+        text-transform: capitalize;
+      }
+      input:focus {
+        border: 2px solid rgb(51, 160, 255);
+      }
+      textarea {
+        padding: 40px 0px 0px 30px;
+        outline: none;
+        width: 100%;
+        max-width: 510.15px;
+        height: 229px;
+        box-sizing: border-box;
+        border: 1px solid rgb(150, 147, 147);
+        border-radius: 0px 3px 3px 0px;
+        box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.01);
+        background: rgb(255, 255, 255);
+        color: rgb(150, 147, 147);
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0px;
+      }
+      textarea:focus {
+        border: 2px solid rgb(51, 160, 255);
+      }
+    }
+  }
+}

@@ -6,6 +6,15 @@ import figmaimg from "../assets/images/figma.png";
 import knosimg from "../assets/images/knos.png";
 import barsofkaimg from "../assets/images/barsofka.png";
 import star from "../assets/images/star.png";
+//product //
+import product1 from "../assets/images/product1.png";
+import product2 from "../assets/images/product2.png";
+import product3 from "../assets/images/product3.png";
+import product5 from "../assets/images/product5.png";
+import product6 from "../assets/images/product6.png";
+import product7 from "../assets/images/product7.png";
+import product8 from "../assets/images/product8.png";
+//product //
 
 export const shippingproduct = [
   {
@@ -75,5 +84,80 @@ export const Featuresproduct = [
     oldPrice: "599",
     stars: star,
     img: barsofkaimg,
+  },
+];
+
+export const products = [
+  {
+    id: 1,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product1,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 2,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product2,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 3,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product3,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 4,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product7,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 5,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product5,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 6,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product6,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 7,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product7,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
+  },
+  {
+    id: 8,
+    title: "Nike Air Max 270 React",
+    stars: star,
+    img: product8,
+    price: "299.43",
+    oldprice: "534.33",
+    limit: "24% off",
   },
 ];

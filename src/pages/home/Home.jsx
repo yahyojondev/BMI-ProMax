@@ -8,7 +8,7 @@ import {
   newsproduct,
   shippingproduct,
 } from "../../static/router";
-import Footer from "../../components/footer/Footer";
+import SingleRoute from "../../components/singleRouet/SingleRoute";
 
 const Home = () => {
   const shippinItem = shippingproduct?.map((el) => (
@@ -73,6 +73,7 @@ const Home = () => {
           </div>
         </div>
         <Products />
+        <NavLink className="product__link">LOAD MORE</NavLink>
       </div>
       <div className="shopNow">
         <div className="container">
@@ -115,7 +116,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

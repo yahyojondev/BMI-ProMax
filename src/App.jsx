@@ -7,6 +7,8 @@ import Login from "./pages/login/Login";
 import Contact from "./pages/contact/Contact";
 import Belt from "./pages/Belt/Belt";
 import Bags from "./pages/bags/Bags";
+import Footer from "./components/footer/Footer";
+import SingleRoute from "./components/singleRouet/SingleRoute";
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/Belt" element={<Belt />} />
           <Route path="/bags" element={<Bags />} />
+          <Route path="/singleRoute" element={<SingleRoute />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

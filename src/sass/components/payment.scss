@@ -1,17 +1,57 @@
 .payment {
   filter: blur(4px);
+  position: relative;
 }
 .payment__wrapper {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+  width: 900px;
+  height: 792.84px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  .payment__link__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 800px;
+    .payment__exit {
+      color: rgb(64, 191, 255);
+      width: 35px;
+      font-family: Poppins;
+      height: 35px;
+      box-shadow: 0px 0px 2px 2px red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left__link__svg {
+      color: rgb(64, 191, 255);
+      font-size: 20px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   .payment__form {
+    display: flex;
+    gap: 70px;
     &__left {
       display: flex;
       flex-direction: column;
       gap: 30px;
       .payment__input {
-        width: 380px;
+        width: 390px;
         height: 50px;
       }
       .select__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         h3 {
           color: rgb(64, 191, 255);
           font-family: Poppins;
@@ -21,7 +61,60 @@
           letter-spacing: 0px;
           text-transform: capitalize;
         }
+        .formgroup {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .form__wrapper {
+            width: 390px;
+            padding-left: 10px;
+            height: 50px;
+            box-shadow: 0px 0px 2px 2px #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            svg {
+              font-size: 20px;
+              color: rgb(64, 191, 255);
+            }
+            .formControl {
+              display: flex;
+              align-items: center;
+              gap: 140px;
+              width: 350px;
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .payment__texarea {
+        outline: none;
+        font-family: Poppins;
+        border: none;
+        border: 2px solid #ddd;
+        padding: 20px 0px 0px 20px;
+        width: 390px;
+        height: 122.52px;
+        border-radius: 10px;
+        background: transparent;
+      }
+      .payment__input {
+        width: 390px;
+        height: 50px;
       }
     }
   }
+  .gotPayment__link {
+    width: 338px;
+    height: 55px;
+    border-radius: 10px;
+    background: rgb(51, 160, 255);
+  }
+}
+.payment__exit:active .payment__wrapper {
+  display: none;
 }

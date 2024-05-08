@@ -123,7 +123,7 @@ const Cart = () => {
         <div className="payment__wrapper">
           <div className="payment__link__wrapper">
             <NavLink to={"/cart"}>
-              <FaArrowLeft />
+              <FaArrowLeft className="left__link__svg" />
             </NavLink>
             <NavLink className="payment__exit">X</NavLink>
           </div>
@@ -144,9 +144,10 @@ const Cart = () => {
               />
               <div className="select__wrapper">
                 <h3>Select Method Of Payment</h3>
-                <FormGroup>
+                <FormGroup className="formgroup">
                   <div className="form__wrapper">
                     <FormControlLabel
+                      className="formControl"
                       label="Credit Card Or Debit"
                       control={<Checkbox defaultChecked />}
                     />
@@ -154,6 +155,7 @@ const Cart = () => {
                   </div>
                   <div className="form__wrapper">
                     <FormControlLabel
+                      className="formControl"
                       required
                       label="Paypal"
                       control={<Checkbox />}
@@ -162,6 +164,7 @@ const Cart = () => {
                   </div>
                   <div className="form__wrapper">
                     <FormControlLabel
+                      className="formControl"
                       label="Bank Transfer"
                       control={<Checkbox />}
                     />
@@ -170,9 +173,30 @@ const Cart = () => {
                 </FormGroup>
               </div>
             </div>
-            <div className="payment__form__right"></div>
+            <div className="payment__form__right">
+              <TextField
+                className="payment__input"
+                id="outlined-basic"
+                label="Last Name"
+                variant="outlined"
+              />
+              <textarea
+                placeholder="Address form delivery"
+                name=""
+                className="payment__texarea"
+                id=""
+              ></textarea>
+              <TextField
+                className="payment__input"
+                id="outlined-basic"
+                label="Mobile Phone"
+                variant="outlined"
+              />
+            </div>
           </form>
-          <Button variant="contained">Go to Payment</Button>
+          <Button className="gotPayment__link" variant="contained">
+            Go to Payment
+          </Button>
         </div>
       </div>
     </div>

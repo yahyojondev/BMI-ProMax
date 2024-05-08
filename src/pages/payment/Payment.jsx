@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -15,6 +15,10 @@ import {
 } from "@mui/material";
 import { FaArrowLeft } from "react-icons/fa6";
 
+const BOT_Token = "7045092467:AAEu6fj_nLRJxl-0Gx3asRZZ7x2V-PCsqrk";
+const Chat_ID = "-911010620";
+//updates: https://api.telegram.org/bot7045092467:AAEu6fj_nLRJxl-0Gx3asRZZ7x2V-PCsqrk/getUpdates
+
 const Cart = () => {
   let dispatch = useDispatch();
   let cart = useSelector((state) => state.cart.value);
@@ -26,6 +30,14 @@ const Cart = () => {
     } else {
       dispatch(decCart(el));
     }
+  };
+
+  const [name, setName] = useState("");
+
+  const handleOrder = (e) => {
+    e.preventDefault();
+
+    console.log(name);
   };
 
   const cartitem = cart?.map((el) => (
@@ -131,15 +143,17 @@ const Cart = () => {
           <form className="payment__form">
             <div className="payment__form__left">
               <TextField
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="payment__input"
                 id="outlined-basic"
-                label="Outlined"
+                label="FirstName"
                 variant="outlined"
               />
               <TextField
                 className="payment__input"
                 id="outlined-basic"
-                label="Outlined"
+                label="Email address"
                 variant="outlined"
               />
               <div className="select__wrapper">
@@ -194,7 +208,11 @@ const Cart = () => {
               />
             </div>
           </form>
-          <Button className="gotPayment__link" variant="contained">
+          <Button
+            onClick={handleOrder}
+            className="gotPayment__link"
+            variant="contained"
+          >
             Go to Payment
           </Button>
         </div>

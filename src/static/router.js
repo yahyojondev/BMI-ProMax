@@ -161,3 +161,161 @@ export const products = [
     limit: "24% off",
   },
 ];
+
+// import iphone9 from "../assets/images/iphone9.jpg";
+// import iphonex from "../assets/images/iphonex.jpg";
+// import samsung from "../assets/images/samsung.jpg";
+// import oppof from "../assets/images/oppof.jpg";
+// import Huawe from "../assets/images/huawe.jpg";
+// import Mackbook from "../assets/images/macbookpro.jpg";
+// import galaxy from "../assets/images/samsung galaxy.jpg";
+// import microsoft from "../assets/images/macrasoftsurpade.jpg";
+// import infinix from "../assets/images/infinix.jpg";
+// import hp from "../assets/images/hppavilion.jpg";
+// import parfumeoil from "../assets/images/parfumeoil.jpg";
+// import Brown from "../assets/images/prownparfume.jpg";
+// import fog from "../assets/images/fogscent.jpg";
+// import non from "../assets/images/nonalcoholis.jpg";
+// import eaude from "../assets/images/eaudeparfume.jpg";
+// import hyaluronic from "../assets/images/hyaluronic.jpg";
+// import tree from "../assets/images/treeoil.jpg";
+// import oilfree from "../assets/images/oilfree.jpg";
+// import skin from "../assets/images/serelas.jpg";
+// import freskle from "../assets/images/freckletreat.jpg";
+// import daal from "../assets/images/dalmasoor.jpg";
+// import elbow from "../assets/images/elbow.jpg";
+// import orange from "../assets/images/orange.jpg";
+// import creals from "../assets/images/oilfree.jpg";
+// import gulab from "../assets/images/gulab.jpg";
+// import plant from "../assets/images/plant.jpg";
+// import fly from "../assets/images/flying.jpg";
+// import tre3D from "../assets/images/3D.jpg";
+// import handcraft from "../assets/images/handcraft.jpg";
+// import key from "../assets/images/key.jpg";
+
+// export const cardimgProduct = [
+//   {
+//     id: 1,
+//     img: iphone9,
+//   },
+//   {
+//     id: 2,
+//     img: iphonex,
+//   },
+//   {
+//     id: 3,
+//     img: samsung,
+//   },
+//   {
+//     id: 4,
+//     img: oppof,
+//   },
+//   {
+//     id: 5,
+//     img: Huawe,
+//   },
+//   {
+//     id: 6,
+//     img: Mackbook,
+//   },
+//   {
+//     id: 7,
+//     img: galaxy,
+//   },
+//   {
+//     id: 8,
+//     img: microsoft,
+//   },
+//   {
+//     id: 9,
+//     img: infinix,
+//   },
+//   {
+//     id: 10,
+//     img: hp,
+//   },
+//   {
+//     id: 11,
+//     img: parfumeoil,
+//   },
+//   {
+//     id: 12,
+//     img: Brown,
+//   },
+//   {
+//     id: 13,
+//     img: fog,
+//   },
+//   {
+//     id: 14,
+//     img: non,
+//   },
+//   {
+//     id: 15,
+//     img: eaude,
+//   },
+//   {
+//     id: 16,
+//     img: hyaluronic,
+//   },
+//   {
+//     id: 17,
+//     img: tree,
+//   },
+//   {
+//     id: 18,
+//     img: oilfree,
+//   },
+//   {
+//     id: 19,
+//     img: skin,
+//   },
+//   {
+//     id: 20,
+//     img: freskle,
+//   },
+//   {
+//     id: 21,
+//     img: daal,
+//   },
+//   {
+//     id: 22,
+//     img: elbow,
+//   },
+//   {
+//     id: 23,
+//     img: orange,
+//   },
+//   {
+//     id: 24,
+//     img: creals,
+//   },
+//   {
+//     id: 25,
+//     img: gulab,
+//   },
+//   {
+//     id: 26,
+//     img: plant,
+//   },
+//   {
+//     id: 27,
+//     img: fly,
+//   },
+//   {
+//     id: 28,
+//     img: tre3D,
+//   },
+//   {
+//     id: 29,
+//     img: handcraft,
+//   },
+//   {
+//     id: 29,
+//     img: handcraft,
+//   },
+//   {
+//     id: 30,
+//     img: key,
+//   },
+// ];

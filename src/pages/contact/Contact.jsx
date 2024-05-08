@@ -8,13 +8,13 @@ const Token = "6756877976:AAG0sVndx22BQXhwfR98bJrMqGYaguuPE6Q";
 const USER_ID = "1240482901";
 const userID = "1747801883";
 const CHAT_ID = "-1001549644098";
-const userID2 = "547328126";
+const userfazullo = "5088090819";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const handleOrder = (e) => {
     console.log(name);
-    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${CHAT_ID}&text=${name}`;
+    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${userfazullo}&text=${name}`;
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();

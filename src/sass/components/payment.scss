@@ -1,0 +1,27 @@
+.payment {
+  filter: blur(4px);
+}
+.payment__wrapper {
+  .payment__form {
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .payment__input {
+        width: 380px;
+        height: 50px;
+      }
+      .select__wrapper {
+        h3 {
+          color: rgb(64, 191, 255);
+          font-family: Poppins;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 23px;
+          letter-spacing: 0px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

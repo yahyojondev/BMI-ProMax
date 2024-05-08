@@ -1,0 +1,51 @@
+.admin {
+  padding: 200px 0px 400px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 41px;
+    h2 {
+      color: rgb(0, 0, 0);
+      font-family: Poppins;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 60px;
+      letter-spacing: -2%;
+      @media only screen and (min-width: 500px) {
+        font-size: 40px;
+      }
+    }
+    .admin__text__wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 26px;
+      p {
+        color: rgb(0, 0, 0);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 180%;
+        letter-spacing: 0.5px;
+      }
+    }
+    .admin__btn {
+      width: 100%;
+      max-width: 280px;
+      height: 40px;
+      color: rgb(255, 255, 255);
+      font-family: Poppins;
+      font-size: 14px;
+      line-height: 33px;
+      letter-spacing: -2%;
+      border-radius: 10px;
+      background: rgb(51, 160, 255);
+      @media only screen and (min-width: 500px) {
+        font-size: 40px;
+        max-width: 338px;
+        height: 55px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -4,8 +4,12 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoSearchOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NavbarTop = () => {
+  const wishes = useSelector((state) => state.wishlist.value).length;
+  const cartcount = useSelector((state) => state.cart.value).length;
+
   return (
     <div className="navbartop">
       <div className="container">
@@ -20,9 +24,11 @@ const NavbarTop = () => {
             </NavLink>
             <NavLink to={"/wishlist"}>
               <IoMdHeartEmpty className="navbartop__svg" />
+              <span className="wishlist__length">{wishes}</span>
             </NavLink>
             <NavLink to={"/cart"}>
-              <FiShoppingCart className="navbartop__svg" />
+              <FiShoppingCart className="navbartop__svg  cartsvg" />
+              <span className="cart__length">{cartcount}</span>
             </NavLink>
             <NavLink className="navbartop__text" to={"/contact"}>
               Items

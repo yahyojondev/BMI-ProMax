@@ -3,14 +3,7 @@ import navbarbottomlogo from "../../assets/images/Icon.png";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-// import { Routers } from "../../static/router";
-
 const NavbarBottom = () => {
-  // const navbarItem = Routers?.map((el) => (
-  //   <li key={el.id} className="navbarbottom__item">
-  //     <NavLink to={el.path}>{el.text}</NavLink>
-  //   </li>
-  // ));
   return (
     <div className="navbarbottom">
       <div className="container">

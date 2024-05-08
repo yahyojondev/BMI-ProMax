@@ -1,0 +1,23 @@
+.wishlist {
+  padding: 160px 0px 126px;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: rgb(34, 38, 42);
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 53px;
+  letter-spacing: 0%;
+  margin: auto;
+}
+.empty__imges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  img {
+    background-color: transparent;
+  }
+}

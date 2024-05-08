@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "../../api";
 import Hero from "../../components/hero/Hero";
 import { NavLink } from "react-router-dom";
-import Products from "../../components/products/Products";
+import Product from "../products/Product";
+// import Products from "../../components/products/Products";
 import shopimages from "../../assets/images/shop.png";
 import {
   Featuresproduct,
   newsproduct,
   shippingproduct,
 } from "../../static/router";
-import SingleRoute from "../../components/singleRouet/SingleRoute";
+// import SingleRoute from "../singleRouet/SingleRoute";
 
 const Home = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("products")
+      .then((res) => setData(res.data.products))
+      .catch((err) => console.log(err));
+  }, []);
+
   const shippinItem = shippingproduct?.map((el) => (
     <div key={el.id} className="shipping__card">
       <img src={el.img} alt="" />
@@ -49,10 +60,13 @@ const Home = () => {
   return (
     <div className="home">
       <Hero />
+      <div className="hero__absolute">
+        <Product data={data ? data.slice(5, 8) : <></>} />
+      </div>
       <div className="product__wrapper__home">
         <div className="products__top">
           <div className="container">
-            <h2>BEST SELLER</h2>
+            <h2 className="product__top__title">BEST SELLER</h2>
             <ul className="products__top__list">
               <li>
                 <NavLink className="product__top__link">All</NavLink>
@@ -72,7 +86,7 @@ const Home = () => {
             </ul>
           </div>
         </div>
-        <Products />
+        <Product data={data} />
         <NavLink className="product__link">LOAD MORE</NavLink>
       </div>
       <div className="shopNow">

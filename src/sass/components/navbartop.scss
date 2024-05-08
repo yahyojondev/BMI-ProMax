@@ -25,8 +25,42 @@
       align-items: center;
       gap: 36px;
       .navbartop__svg {
+        position: relative;
         font-size: 22px;
         color: rgb(0, 0, 0);
+      }
+      .wishlist__length {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15px;
+        height: 15px;
+        top: 3px;
+        right: 330px;
+        background-color: red;
+        border-radius: 50%;
+        font-size: 12px;
+        font-family: Poppins;
+        padding: 5px;
+      }
+      .cartsvg {
+        position: relative;
+      }
+      .cart__length {
+        position: absolute;
+        top: 3px;
+        right: 270px;
+        font-size: 12px;
+        font-family: Poppins;
+        padding: 5px;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .navbartop__text {
         display: none;

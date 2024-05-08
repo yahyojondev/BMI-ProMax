@@ -36,6 +36,10 @@ const Cart = () => {
 
   const handleOrder = (e) => {
     e.preventDefault();
+    let url = ` https://api.telegram.org/bot${BOT_Token}/sendMessage?chat_id=${Chat_ID}&text=${name}`;
+    let api = new XMLHttpRequest();
+    api.open("Get", url, true);
+    api.send();
 
     console.log(name);
   };

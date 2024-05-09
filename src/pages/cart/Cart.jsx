@@ -4,6 +4,7 @@ import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { Button, TextField } from "@mui/material";
+import Confetti from "react-confetti";
 
 const Cart = () => {
   let dispatch = useDispatch();

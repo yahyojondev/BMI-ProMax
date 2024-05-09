@@ -40,18 +40,6 @@ const Login = () => {
               label="Username"
               variant="outlined"
             />
-            {/* <input
-              value={username}
-              placeholder="Username"
-              onChange={(e) => setUsername(e.target.value)}
-              type="text"
-            /> */}
-            {/* <input
-              placeholder="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              type="text"
-            /> */}
             <TextField
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -63,7 +51,6 @@ const Login = () => {
             <Button type="submit" className="login__btn" variant="contained">
               Login
             </Button>
-            {/* <button>login</button> */}
           </form>
         </div>
       </div>

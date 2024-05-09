@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate, useNavigate } from "react-router-dom";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { IoLogoPaypal } from "react-icons/io5";
 import { BsBank } from "react-icons/bs";
@@ -14,6 +14,7 @@ import {
   TextField,
 } from "@mui/material";
 import { FaArrowLeft } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const BOT_Token = "7045092467:AAEu6fj_nLRJxl-0Gx3asRZZ7x2V-PCsqrk";
 const Chat_ID = "-911010620";
@@ -33,13 +34,15 @@ const Cart = () => {
   };
 
   const [name, setName] = useState("");
-
+  const navigate = useNavigate();
   const handleOrder = (e) => {
     e.preventDefault();
     let url = ` https://api.telegram.org/bot${BOT_Token}/sendMessage?chat_id=${Chat_ID}&text=${name}`;
     let api = new XMLHttpRequest();
     api.open("Get", url, true);
     api.send();
+    toast.success("qabul qilindi szga yaqin orada aloqaga chiqamiz😊");
+    navigate("/cart");
 
     console.log(name);
   };

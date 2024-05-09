@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Token = "6756877976:AAG0sVndx22BQXhwfR98bJrMqGYaguuPE6Q";
 
@@ -18,6 +19,7 @@ const Contact = () => {
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();
+    toast.success("Kontaktingiz qabul qilindi");
   };
 
   return (

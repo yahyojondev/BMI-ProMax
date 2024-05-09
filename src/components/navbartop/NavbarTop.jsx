@@ -22,11 +22,11 @@ const NavbarTop = () => {
             <NavLink to={"/login"}>
               <IoPersonSharp className="navbartop__svg" />
             </NavLink>
-            <NavLink to={"/wishlist"}>
+            <NavLink className="cart__link" to={"/wishlist"}>
               <IoMdHeartEmpty className="navbartop__svg" />
               <span className="wishlist__length">{wishes}</span>
             </NavLink>
-            <NavLink to={"/cart"}>
+            <NavLink className="cart__link" to={"/cart"}>
               <FiShoppingCart className="navbartop__svg  cartsvg" />
               <span className="cart__length">{cartcount}</span>
             </NavLink>

@@ -25,42 +25,42 @@
       align-items: center;
       gap: 36px;
       .navbartop__svg {
-        position: relative;
         font-size: 22px;
         color: rgb(0, 0, 0);
       }
-      .wishlist__length {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 15px;
-        height: 15px;
-        top: 3px;
-        right: 330px;
-        background-color: red;
-        border-radius: 50%;
-        font-size: 12px;
-        font-family: Poppins;
-        padding: 5px;
-      }
-      .cartsvg {
+      .cart__link {
         position: relative;
       }
-      .cart__length {
+      .wishlist__length {
         position: absolute;
-        top: 3px;
-        right: 270px;
-        font-size: 12px;
-        font-family: Poppins;
-        padding: 5px;
-        background-color: red;
+        top: -5px;
+        right: -5px;
+        border-radius: 50%;
         width: 15px;
         height: 15px;
-        border-radius: 50%;
+        grid-row-end: 5px;
         display: flex;
         align-items: center;
+        font-size: 12px;
         justify-content: center;
+        background-color: red;
+        color: white;
+      }
+
+      .cart__length {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        grid-row-end: 5px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        justify-content: center;
+        background-color: red;
+        color: white;
       }
       .navbartop__text {
         display: none;

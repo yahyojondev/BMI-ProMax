@@ -4,7 +4,6 @@ import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { Button, TextField } from "@mui/material";
-import Confetti from "react-confetti";
 
 const Cart = () => {
   let dispatch = useDispatch();
@@ -65,6 +64,7 @@ const Cart = () => {
     <div className="cart">
       <div className="container">
         <div className="cart__wrapper">
+          <h3 className="cart__creat">Your Cards</h3>
           <div className="cart__titles">
             <h3>Product</h3>
             <div className="cart__titles__wrapper">

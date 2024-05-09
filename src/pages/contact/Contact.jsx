@@ -13,6 +13,7 @@ const CHAT_ID = "-1001549644098";
 const userfazullo = "5088090819";
 
 const Contact = () => {
+  window.scrollTo(0, 0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [textarea, setTextare] = useState("");

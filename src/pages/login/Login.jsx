@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 const API_URL = "https://fakestoreapi.com/auth/login";
 
 const Login = () => {
+  window.scrollTo(0, 0);
+
   const [username, setUsername] = useState("johnd");
   const [password, setPassword] = useState("m38rmF$");
   const navigate = useNavigate();

@@ -9,15 +9,23 @@
       flex-direction: column;
       gap: 40px;
     }
+    .cart__creat {
+      font-family: Poppins;
+      @media only screen and (min-width: 850px) {
+        display: none;
+      }
+    }
     .cart__titles {
-      display: flex;
+      display: none;
       height: 80px;
       padding: 0px 20px;
       box-shadow: 0px 0px 5px 5px #ddd;
       border-radius: 5px;
-
       align-items: center;
       justify-content: space-between;
+      @media only screen and (min-width: 850px) {
+        display: flex;
+      }
       h3 {
         color: rgb(34, 38, 42);
         font-family: Poppins;
@@ -33,18 +41,36 @@
       }
     }
     .cart__title__wrapper {
-      box-shadow: 0px 0px 5px 5px #ddd;
-      height: 80px;
-      border-radius: 5px;
-      padding: 0px 20px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .img__title {
-        width: 400px;
+      flex-direction: column;
+      gap: 20px;
+
+      @media only screen and (min-width: 850px) {
+        box-shadow: 0px 0px 5px 5px #ddd;
+        height: 80px;
+        border-radius: 5px;
+        padding: 0px 20px;
         display: flex;
-        gap: 20px;
         align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .img__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0px 0px 2px 2px gray;
+        padding: 5px;
+
+        @media only screen and (min-width: 850px) {
+          width: 400px;
+          display: flex;
+          justify-content: flex-start;
+          gap: 20px;
+          align-items: center;
+          box-shadow: none;
+        }
         button {
           border: none;
           outline: none;
@@ -71,11 +97,20 @@
         }
       }
       .cart__price__wrapper {
-        width: 500px;
-        height: 50px;
         display: flex;
         align-items: center;
-        gap: 115px;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0px 0px 2px 2px gray;
+        padding: 5px;
+        @media only screen and (min-width: 850px) {
+          width: 500px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          gap: 115px;
+          box-shadow: none;
+        }
         .cart__price {
           background-color: white;
           width: 80px;
@@ -128,19 +163,48 @@
     }
     .cart__wrapper__bottom {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      gap: 20px;
+      @media only screen and (min-width: 850px) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
       .cart__btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media only screen and (min-width: 700px) {
+          flex-direction: row;
+          gap: 0;
+        }
         .cart__btns__btn {
-          border-radius: 0px;
-          height: 61px;
-          border-radius: 0px 5px 5px 0px;
+          width: 200px;
+          @media only screen and (min-width: 700px) {
+            border-radius: 0px;
+            height: 60px;
+            border-radius: 0px 5px 5px 0px;
+            width: 100px;
+          }
         }
         .cart__btns__input {
-          border-radius: 5px 0px 0px 5px;
-          padding: 0px 0px 0px 10px;
-          height: 60px;
-          width: 369px;
-          border: 1px solid #ddd;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          height: 50px;
+          max-width: 400px;
+          border-radius: 5px;
+          padding: 10px;
+          outline: none;
+
+          @media only screen and (min-width: 700px) {
+            border-radius: 5px 0px 0px 5px;
+            padding: 0px 0px 0px 10px;
+            height: 60px;
+            width: 369px;
+            border: 1px solid #ddd;
+          }
         }
         .cart__btns__input::placeholder {
           color: rgb(38, 38, 38);
@@ -152,7 +216,8 @@
         }
       }
       .card__input__total {
-        width: 377px;
+        width: 100%;
+        max-width: 377px;
         height: 350px;
         display: flex;
         flex-direction: column;
@@ -185,7 +250,7 @@
           h2 {
             color: rgb(34, 38, 42);
             font-family: Poppins;
-            font-size: 30px;
+            font-size: 20px;
             font-weight: 500;
             line-height: 30px;
             letter-spacing: 0%;

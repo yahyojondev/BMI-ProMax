@@ -14,7 +14,7 @@ const Footer = () => {
             <ul className="footer__top__list">
               <li className="footer__top__item">
                 <div>
-                  <img src={footerlogo} alt="" />
+                  <img className="footer__lofo" src={footerlogo} alt="" />
                   <p>E-Comm</p>
                 </div>
                 <ul className="footer__top__item__list">

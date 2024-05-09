@@ -1,14 +1,6 @@
-.nothing {
-  padding-top: 100px;
-  width: 100%;
-  height: 100%;
+.belt {
+  padding: 200px 0px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  img {
-    width: 100%;
-    object-fit: contain;
-    object-fit: cover;
-    // width: 600px;
-    height: 100%;
-  }
 }

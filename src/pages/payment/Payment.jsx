@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { NavLink, Navigate, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { IoLogoPaypal } from "react-icons/io5";
 import { BsBank } from "react-icons/bs";
@@ -34,10 +34,19 @@ const Cart = () => {
   };
 
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const handleOrder = (e) => {
+    let text = "Buyurtma %0A%0A";
+    text += `Name : ${name} %0A`;
+    text += `email: ${email} %0A%0A`;
+    cart.forEach((product) => {
+      text += `Nomi: ${product.title} %0A`;
+      text += `quantity: ${product.quantity} %0A`;
+      text += `Price: $${product.price} %0A%0A`;
+    });
     e.preventDefault();
-    let url = ` https://api.telegram.org/bot${BOT_Token}/sendMessage?chat_id=${Chat_ID}&text=${name}`;
+    let url = ` https://api.telegram.org/bot${BOT_Token}/sendMessage?chat_id=${Chat_ID}&text=${text}&parse_mode=html`;
     let api = new XMLHttpRequest();
     api.open("Get", url, true);
     api.send();
@@ -158,6 +167,8 @@ const Cart = () => {
                 variant="outlined"
               />
               <TextField
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="payment__input"
                 id="outlined-basic"
                 label="Email address"

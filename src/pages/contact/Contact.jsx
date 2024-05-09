@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { Button } from "@mui/material";
+import React, { useState, memo } from "react";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -13,9 +14,15 @@ const userfazullo = "5088090819";
 
 const Contact = () => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [textarea, setTextare] = useState("");
   const handleOrder = (e) => {
+    let text = "";
+    text += `FullName: ${name}%0A`;
+    text += `Email: ${email}%0A%0A`;
+    text += `izoh: ${textarea}`;
     console.log(name);
-    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${userfazullo}&text=${name}`;
+    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${USER_ID}&text=${text}`;
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();
@@ -37,6 +44,7 @@ const Contact = () => {
               <div className="input__wrapper">
                 <p>Full Name</p>
                 <input
+                  required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="James Doe"
@@ -45,12 +53,31 @@ const Contact = () => {
               </div>
               <div className="input__wrapper">
                 <p>Email</p>
-                <input placeholder="jamesdoe@gmail.com" type="text" />
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  placeholder="jamesdoe@gmail.com"
+                  type="text"
+                />
               </div>
               <div className="input__wrapper">
                 <p>Mesaage</p>
-                <textarea placeholder="Type your message" type="text" />
+                <textarea
+                  value={textarea}
+                  onChange={(e) => setTextare(e.target.value)}
+                  required
+                  placeholder="Type your message"
+                  type="text"
+                />
               </div>
+              <Button
+                className="contact__send__btn"
+                onClick={handleOrder}
+                variant="contained"
+              >
+                Send
+              </Button>
             </form>
           </div>
         </div>
@@ -59,7 +86,7 @@ const Contact = () => {
         <div className="search__wrapper">
           <div className="input_wrapper">
             <input placeholder="search query" type="text" />
-            <button onClick={handleOrder}>Search</button>
+            <button>Search</button>
           </div>
         </div>
       </div>
@@ -67,4 +94,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

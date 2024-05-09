@@ -60,8 +60,17 @@ const Home = () => {
   return (
     <div className="home">
       <Hero />
-      <div className="hero__absolute">
-        <Product data={data ? data.slice(5, 8) : <></>} />
+      <div className="hero__product__absolute">
+        <div className="container">
+          <div className="hero__absolute">
+            <div className="container">
+              <Product
+                className="product__slice"
+                data={data ? data.slice(5, 8) : <></>}
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <div className="product__wrapper__home">
         <div className="products__top">
@@ -97,7 +106,9 @@ const Home = () => {
               <p>Performance and design. Taken right to the edge.</p>
               <NavLink to={"/payment"}>SHOP NOW</NavLink>
             </div>
-            <img src={shopimages} alt="" />
+            <div className="shopNow__wrapper__right">
+              <img src={shopimages} alt="" />
+            </div>
           </div>
         </div>
       </div>

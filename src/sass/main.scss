@@ -34,3 +34,19 @@ a {
 @import "./pages//login.scss";
 @import "./pages/belt.scss";
 @import "./pages/product.scss";
+
+.loading__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  color: #000;
+  gap: 10px;
+  div {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+}

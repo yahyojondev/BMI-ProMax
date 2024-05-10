@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
 const Auth = () => {
@@ -6,4 +6,4 @@ const Auth = () => {
   return user ? <Outlet /> : <Navigate replace to={"/login"} />;
 };
 
-export default Auth;
+export default memo(Auth);

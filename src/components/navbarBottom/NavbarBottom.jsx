@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import navbarbottomlogo from "../../assets/images/Icon.png";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -57,4 +57,4 @@ const NavbarBottom = () => {
   );
 };
 
-export default NavbarBottom;
+export default memo(NavbarBottom);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Button } from "@mui/material";
 import Confetti from "react-confetti";
 import { NavLink } from "react-router-dom";
@@ -59,4 +59,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default memo(Admin);

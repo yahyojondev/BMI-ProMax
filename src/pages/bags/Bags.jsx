@@ -1,5 +1,4 @@
-import React from "react";
-import Nothing from "../../components/noting/Nothing";
+import React, { memo } from "react";
 import bagsimg from "../../assets/images/empty.jpg";
 
 const Bags = () => {
@@ -10,4 +9,4 @@ const Bags = () => {
   );
 };
 
-export default Bags;
+export default memo(Bags);

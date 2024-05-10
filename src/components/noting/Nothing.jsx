@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import nothingimg from "../../assets/images/nothing2.webp";
 
 const Nothing = () => {
@@ -9,4 +9,4 @@ const Nothing = () => {
   );
 };
 
-export default Nothing;
+export default memo(Nothing);

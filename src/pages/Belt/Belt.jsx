@@ -1,5 +1,4 @@
-import React from "react";
-import Nothing from "../../components/noting/Nothing";
+import React, { memo } from "react";
 import beltimg from "../../assets/images/empty.jpg";
 
 const Belt = () => {
@@ -10,4 +9,4 @@ const Belt = () => {
   );
 };
 
-export default Belt;
+export default memo(Belt);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
 import footerlogo from "../../assets/images/Icon.png";
 import { FaFacebook } from "react-icons/fa";
@@ -120,4 +120,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

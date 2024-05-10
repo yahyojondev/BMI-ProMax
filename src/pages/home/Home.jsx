@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import axios from "../../api";
 import Hero from "../../components/hero/Hero";
 import { NavLink } from "react-router-dom";
@@ -13,6 +13,7 @@ import {
 // import SingleRoute from "../singleRouet/SingleRoute";
 
 const Home = () => {
+  window.scrollTo(0, 0);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -145,4 +146,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

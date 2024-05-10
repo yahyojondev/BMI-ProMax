@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import stars from "../../assets/images/star.png";
 import { FaRegHeart } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
@@ -52,4 +52,4 @@ const Product = ({ data }) => {
   );
 };
 
-export default Product;
+export default memo(Product);

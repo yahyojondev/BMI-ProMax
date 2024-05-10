@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import rasm from "../../assets/images/hero.png";
 
 const Hero = ({ data }) => {
@@ -15,4 +15,4 @@ const Hero = ({ data }) => {
   );
 };
 
-export default Hero;
+export default memo(Hero);

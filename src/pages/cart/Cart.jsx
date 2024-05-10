@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -116,4 +116,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default memo(Cart);

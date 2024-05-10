@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { IoPersonSharp } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
@@ -43,4 +43,4 @@ const NavbarTop = () => {
   );
 };
 
-export default NavbarTop;
+export default memo(NavbarTop);

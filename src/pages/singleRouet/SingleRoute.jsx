@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import starimg from "../../assets/images/rating.png";
 import axios from "../../api";
 import { NavLink, useParams } from "react-router-dom";
@@ -157,4 +157,4 @@ const SingleRoute = () => {
   );
 };
 
-export default SingleRoute;
+export default memo(SingleRoute);

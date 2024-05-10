@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decCart, incCart, removeFromCart } from "../../context/CartSlice";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -18,6 +18,7 @@ import { toast } from "react-toastify";
 
 const BOT_Token = "7045092467:AAEu6fj_nLRJxl-0Gx3asRZZ7x2V-PCsqrk";
 const Chat_ID = "-911010620";
+const user = "1240482901";
 //updates: https://api.telegram.org/bot7045092467:AAEu6fj_nLRJxl-0Gx3asRZZ7x2V-PCsqrk/getUpdates
 
 const Cart = () => {
@@ -46,7 +47,7 @@ const Cart = () => {
       text += `Price: $${product.price} %0A%0A`;
     });
     e.preventDefault();
-    let url = ` https://api.telegram.org/bot${BOT_Token}/sendMessage?chat_id=${Chat_ID}&text=${text}&parse_mode=html`;
+    let url = ` https://api.telegram.org/bot${BOT_Token}/sendMessage?chat_id=${user}&text=${text}&parse_mode=html`;
     let api = new XMLHttpRequest();
     api.open("Get", url, true);
     api.send();
@@ -239,4 +240,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default memo(Cart);

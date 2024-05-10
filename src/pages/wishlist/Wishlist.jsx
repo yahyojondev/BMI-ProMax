@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { useSelector } from "react-redux";
 import Product from "../products/Product";
 import axios from "../../api";
@@ -34,4 +34,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default memo(Wishlist);

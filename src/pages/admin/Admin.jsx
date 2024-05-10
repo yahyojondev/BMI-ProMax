@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Admin = () => {
   return (
     <div className="admin">
-      <Confetti width={window.innerWidth - 100} />;
+      <Confetti width={window.innerWidth - 100} />
       <div className="container">
         <div className="admin__wrapper">
           <h2>Admin Panel</h2>

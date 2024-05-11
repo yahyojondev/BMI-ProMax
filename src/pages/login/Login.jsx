@@ -36,7 +36,7 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <TextField
               value={username}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
               className="login__input"
               id="outlined-basic"
               label="Username"

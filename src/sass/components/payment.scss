@@ -4,27 +4,33 @@
 }
 .payment__wrapper {
   position: absolute;
-  top: 200px;
-  left: 300px;
+  top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid red;
+  border: 2px solid gray;
   width: 100%;
   max-width: 900px;
-  height: 792.84px;
   border-radius: 10px;
   background: rgb(255, 255, 255);
+  padding: 10px;
+  @media only screen and (min-width: 1280px) {
+    left: 300px;
+  }
   .payment__link__wrapper {
     display: flex;
     align-items: center;
-    gap: 800px;
+    gap: 200px;
+    @media only screen and (min-width: 100px) {
+      gap: 800px;
+    }
+
     .payment__exit {
       color: rgb(64, 191, 255);
       width: 35px;
       font-family: Poppins;
       height: 35px;
-      box-shadow: 0px 0px 2px 2px red;
+      box-shadow: 0px 0px 2px 2px gray;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,15 +54,26 @@
   flex-direction: column;
   gap: 40px;
   .payment__form {
+    padding: 10px;
     display: flex;
-    gap: 70px;
+    flex-direction: column;
+    gap: 10px;
+    @media only screen and (min-width: 500px) {
+      gap: 70px;
+    }
+    @media only screen and (min-width: 1000px) {
+      flex-direction: row;
+    }
     &__left {
       display: flex;
       flex-direction: column;
       gap: 30px;
       .payment__input {
-        width: 390px;
-        height: 50px;
+        width: 100%;
+        @media only screen and (min-width: 500px) {
+          width: 390px;
+          height: 50px;
+        }
       }
       .select__wrapper {
         display: flex;
@@ -65,24 +82,30 @@
         h3 {
           color: rgb(64, 191, 255);
           font-family: Poppins;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
           line-height: 23px;
           letter-spacing: 0px;
           text-transform: capitalize;
+          @media only screen and (min-width: 500px) {
+            font-size: 20px;
+          }
         }
         .formgroup {
           display: flex;
           flex-direction: column;
           gap: 20px;
           .form__wrapper {
-            width: 390px;
+            width: 150px;
             padding-left: 10px;
             height: 50px;
             box-shadow: 0px 0px 2px 2px #ddd;
             border-radius: 5px;
             display: flex;
             align-items: center;
+            @media only screen and (min-width: 500px) {
+              width: 390px;
+            }
             svg {
               font-size: 20px;
               color: rgb(64, 191, 255);
@@ -90,8 +113,11 @@
             .formControl {
               display: flex;
               align-items: center;
-              gap: 140px;
+              gap: 10px;
               width: 350px;
+              @media only screen and (min-width: 500px) {
+                gap: 140px;
+              }
             }
           }
         }
@@ -107,22 +133,31 @@
         border: none;
         border: 2px solid #ddd;
         padding: 20px 0px 0px 20px;
-        width: 390px;
+        width: 150px;
         height: 122.52px;
         border-radius: 10px;
         background: transparent;
+        @media only screen and (min-width: 500px) {
+          width: 390px;
+        }
       }
       .payment__input {
-        width: 390px;
-        height: 50px;
+        width: 150px;
+        @media only screen and (min-width: 500px) {
+          width: 390px;
+          height: 50px;
+        }
       }
     }
   }
   .gotPayment__link {
-    width: 338px;
+    width: 150px;
     height: 55px;
     border-radius: 10px;
     background: rgb(51, 160, 255);
+    @media only screen and (min-width: 500px) {
+      width: 338px;
+    }
   }
 }
 .payment__exit:active .payment__wrapper {

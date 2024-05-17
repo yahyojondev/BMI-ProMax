@@ -4,7 +4,7 @@ import Hero from "../../components/hero/Hero";
 import { NavLink } from "react-router-dom";
 import Product from "../products/Product";
 // import Products from "../../components/products/Products";
-import shopimages from "../../assets/images/shop.png";
+import shopimages from "../../assets/images/iphonewrapper.jpg";
 import {
   Featuresproduct,
   newsproduct,
@@ -103,7 +103,7 @@ const Home = () => {
         <div className="container">
           <div className="shopNow__wrapper">
             <div className="shopNow__wrapper__left">
-              <h2>Adidas Men Running Sneakers</h2>
+              <h2>Iphone Men fawourite Phone</h2>
               <p>Performance and design. Taken right to the edge.</p>
               <NavLink to={"/payment"}>SHOP NOW</NavLink>
             </div>

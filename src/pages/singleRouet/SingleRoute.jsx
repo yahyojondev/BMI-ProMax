@@ -7,6 +7,7 @@ import Product from "../products/Product";
 import { FaRegHeart } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
+import { productimg } from "../../static/router";
 
 const SingleRoute = () => {
   const [product, setProduct] = useState([]);

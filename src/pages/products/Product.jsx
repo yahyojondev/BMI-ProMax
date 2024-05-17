@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleToWishes } from "../../context/wishlistSlice";
 import { addToCart } from "../../context/CartSlice";
+import { productimg } from "../../static/router";
 
 const Product = ({ data }) => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Product = ({ data }) => {
   const productItem = data?.map((el) => (
     <div key={el.id} className="product__card">
       <div className="product__card__wrapper">
-        <img src={el.images[0]} alt="" />
+        <img src={productimg[el.id - 1]?.link} alt="" />
         <div className="cart__wishlist">
           <button onClick={() => dispatch(toggleToWishes(el))}>
             {wishes.some((w) => w.id === el.id) ? <FaHeart /> : <FaRegHeart />}
@@ -28,7 +29,9 @@ const Product = ({ data }) => {
       <hr />
       <div className="product__card__content">
         <NavLink to={`/singleRouet/${el.id}`}>
-          <h3 className="product__card__title">{el.title}</h3>
+          <h3 className="product__card__title">
+            {productimg[el.id - 1].title}
+          </h3>
         </NavLink>
         <div className="rating__wrapper">
           <img src={stars} alt="" />

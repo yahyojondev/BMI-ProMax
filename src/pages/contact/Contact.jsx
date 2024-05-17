@@ -8,8 +8,8 @@ const Token = "6756877976:AAG0sVndx22BQXhwfR98bJrMqGYaguuPE6Q";
 // updates: https://api.telegram.org/bot6756877976:AAG0sVndx22BQXhwfR98bJrMqGYaguuPE6Q/getUpdates//
 
 const USER_ID = "1240482901";
-const userID = "1747801883";
-const CHAT_ID = "-1001549644098";
+const userID = "1808354246";
+const CHAT_ID = "-1001563165933";
 const userfazullo = "5088090819";
 
 const Contact = () => {
@@ -23,7 +23,7 @@ const Contact = () => {
     text += `Email: ${email}%0A%0A`;
     text += `izoh: ${textarea}`;
     console.log(name);
-    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${USER_ID}&text=${text}`;
+    let url = ` https://api.telegram.org/bot${Token}/sendMessage?chat_id=${CHAT_ID}&text=${text}`;
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();

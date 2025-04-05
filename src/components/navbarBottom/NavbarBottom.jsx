@@ -1,5 +1,5 @@
 import React, { useState, memo } from "react";
-import navbarbottomlogo from "../../assets/images/Icon.png";
+import navbarbottomlogo from "../../assets/images/promax.jpg";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -11,7 +11,7 @@ const NavbarBottom = () => {
         <div className="navbarbottom__wrapper">
           <NavLink to={"/"} className="navbarbottom__wrapper__left">
             <img src={navbarbottomlogo} alt="" />
-            <h3>E-Comm</h3>
+            <h3>ProMax</h3>
           </NavLink>
           <ul className="navbarbottom__list  ${show}">
             <li>

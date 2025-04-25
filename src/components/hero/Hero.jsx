@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import rasm from "../../assets/images/iphone2.webp";
+import rasm from "../../assets/images/logo.avif";
 
 const Hero = ({ data }) => {
   return (

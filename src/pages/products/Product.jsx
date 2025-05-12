@@ -9,6 +9,7 @@ import { toggleToWishes } from "../../context/wishlistSlice";
 import { addToCart } from "../../context/CartSlice";
 import { productimg } from "../../static/router";
 
+
 const Product = ({ data }) => {
   const dispatch = useDispatch();
   const wishes = useSelector((state) => state.wishlist.value);

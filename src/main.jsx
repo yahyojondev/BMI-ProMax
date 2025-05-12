@@ -11,15 +11,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Suspense
       fallback={
         <div className="loading__wrapper">
-          <div>N</div>
+          <div>P</div>
+          <div>R</div>
+          <div>O</div>
+          <div>M</div>
           <div>A</div>
-          <div>B</div>
-          <div>I</div>
-          <div>J</div>
-          <div>O</div>
-          <div>N</div>
-          <div>O</div>
-          <div>V</div>
+          <div>X</div>
         </div>
       }
     >
